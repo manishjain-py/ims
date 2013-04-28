@@ -1,0 +1,16 @@
+raw materials - 118
+finished goods - 122
+recipe - 118
+
+CLD-ABDUL
+SIL DF(80%)
+WEI (90%)
+F 1500
+GLYDAL BD
+WEI (SHARMA DYE)
+	
+CCL - SURYA
+NS270 LCF
+DESIZER - SRF
+
+POTASSIUM SORBATE(used in recipe BP (SHARMA DYE))

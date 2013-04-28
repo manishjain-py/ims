@@ -1,0 +1,16 @@
+stm.executeUpdate(sql);
+                        String sql1 = "Update Recipe set recipeeName='" + TextName.getText() +"',recipeeAlias='"+TextAlias.getText()+ "' where recipeeName='" + editItem + "'";
+                        stm.executeUpdate(sql1);
+                        String sql2 = "Select recipeeName from CustomRecipee where recipeeName LIKE '" + editItem + "%'";
+                        PreparedStatement temppst = conn.prepareStatement(sql2);
+                        ResultSet temprs = temppst.executeQuery();
+                        while(temprs.next()){
+                        String oldName = temprs.getString("recipeeName");
+                        String fullName = temprs.getString("recipeeName");
+                       // fullName = "aloo@2012-10-10/12:12:12";
+                        String firstName = TextName.getText();
+                        String s[] = fullName.split("@");
+                        fullName = firstName+"@"+s[1];
+                        String sql10 = "Update CustomRecipee set recipeeName='" + fullName + "' where recipeeName='" + oldName + "'";
+                        stm.executeUpdate(sql10);
+                        }
